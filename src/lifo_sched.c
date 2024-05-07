@@ -33,14 +33,16 @@ void *worker_thread(void *arg) {
     while (true) {
         pthread_mutex_lock(&s->lock);
         while (!s->stack && s->active) {
-            if (DEBUG) printf("Thread %lu sleeping\n", pthread_self());
+            if (DEBUG)
+                printf("Thread %lu sleeping\n", (unsigned long)pthread_self());
             pthread_cond_wait(&s->cond, &s->lock);
         }
 
         // If the scheduler is inactive and the stack is empty, exit the thread
         if (!s->active && !s->stack) {
             pthread_mutex_unlock(&s->lock);
-            if (DEBUG) printf("Thread %lu exiting\n", pthread_self());
+            if (DEBUG)
+                printf("Thread %lu exiting\n", (unsigned long)pthread_self());
             pthread_exit(NULL);
         }
 
