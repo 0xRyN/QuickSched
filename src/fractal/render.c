@@ -1,4 +1,6 @@
+#if defined(__linux__)
 #define _POSIX_C_SOURCE 199309L
+#endif
 
 #include "render.h"
 
