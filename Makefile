@@ -1,6 +1,14 @@
 
 CC = gcc
-SDL_INC = -I/usr/include/SDL2
+
+OS = $(shell uname -s)
+
+ifeq ($(OS), Darwin)
+    SDL_INC = -I/usr/local/include/SDL2
+else ifeq ($(OS), Linux)
+    SDL_INC = -I/usr/include/SDL2
+endif
+
 SDL_LIBS = -lSDL2 -lm
 
 CFLAGS = -pthread -Wall -I. -g $(SDL_INC)
