@@ -30,7 +30,7 @@ Run the following command to install the required packages:
 
 ### Running the benchmark
 
-Run the following command to start the interactive benchmark notebook:
+Run the following command to start the interactive benchmark notebook, which will run the benchmarks using your system's configuration:
 
 `jupyter notebook InteractiveBenchmark.ipynb`
 
@@ -39,3 +39,7 @@ The notebook should open in your default browser.
 If it doesn't, open your browser and navigate to `http://localhost:8888/notebooks/InteractiveBenchmark.ipynb`.
 
 Afterwards, just follow the instructions in the Notebook to get started.
+
+**Note: The benchmarks PDF are done on Linux (Ubuntu 20.04) using a powerful Ryzen 9 3900X and MacOS Ventura using a less powerful Intel Core i9-9880H. You can check the PDF files `Interactive Scheduler Benchmarks Linux.pdf` and `Interactive Scheduler Benchmarks MacOS.pdf` for more information.**
+
+**This project wasn't tested on Windows.**
