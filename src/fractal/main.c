@@ -35,11 +35,13 @@ void handle_keydown(SDL_Keycode key) {
 
         case SDLK_PLUS:
         case SDLK_KP_PLUS:
+        case SDLK_p:
             scale += ZOOM_STEP;
             break;
 
         case SDLK_MINUS:
         case SDLK_KP_MINUS:
+        case SDLK_m:
             scale -= ZOOM_STEP;
             break;
 
