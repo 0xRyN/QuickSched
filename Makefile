@@ -27,16 +27,16 @@ all:
 	@echo "  quicksteal: Quicksort with work-stealing scheduling"
 	@echo "  stealbench: Benchmark for quicksort with work-stealing scheduling"
 
-fracsteal: workstealing_sched_sync.o $(FRACTAL_OBJECTS)
+fracsteal: OBJ_DIR workstealing_sched_sync.o $(FRACTAL_OBJECTS)
 	$(CC) $(CFLAGS) $(FRACTAL_OBJECTS) $(OBJ_DIR)/workstealing_sched_sync.o -o fracsteal $(LDFLAGS)
 
-quicklifo: lifo_sched.o $(QUICKSORT_OBJECTS)
+quicklifo: OBJ_DIR lifo_sched.o $(QUICKSORT_OBJECTS)
 	$(CC) $(CFLAGS) $(QUICKSORT_OBJECTS) $(OBJ_DIR)/lifo_sched.o -o quicklifo $(LDFLAGS)
 
-quicksteal: workstealing_sched.o $(QUICKSORT_OBJECTS)
+quicksteal: OBJ_DIR workstealing_sched.o $(QUICKSORT_OBJECTS)
 	$(CC) $(CFLAGS) $(QUICKSORT_OBJECTS) $(OBJ_DIR)/workstealing_sched.o -o quicksteal $(LDFLAGS)
 
-stealbench: workstealing_sched_bench.o $(QUICKSORT_OBJECTS)
+stealbench: OBJ_DIR workstealing_sched_bench.o $(QUICKSORT_OBJECTS)
 	$(CC) $(CFLAGS) $(QUICKSORT_OBJECTS) $(OBJ_DIR)/workstealing_sched_bench.o -o stealbench $(LDFLAGS)
 
 lifo_sched.o: $(SRC_DIR)/lifo_sched.c
@@ -50,6 +50,9 @@ workstealing_sched_sync.o: $(SRC_DIR)/workstealing_sched_sync.c
 
 workstealing_sched_bench.o: $(SRC_DIR)/workstealing_sched_bench.c
 	$(CC) $(CFLAGS) -c $(SRC_DIR)/workstealing_sched_bench.c -o $(OBJ_DIR)/workstealing_sched_bench.o
+
+OBJ_DIR: 
+	@mkdir -p $(OBJ_DIR)
 
 $(OBJ_DIR)/%.o: %.c
 	@mkdir -p $(@D)
