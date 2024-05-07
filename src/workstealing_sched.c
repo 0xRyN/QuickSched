@@ -1,5 +1,7 @@
+#if defined(__linux__)
 #define _POSIX_C_SOURCE 199309L
 #define _DEFAULT_SOURCE
+#endif
 
 #include <errno.h>
 #include <math.h>
