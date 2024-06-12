@@ -1,5 +1,27 @@
 # Systems Project - Process Schedulers
 
+## TL;DR
+
+Quick Access To Benchmarks
+
+-   [Linux Benchmarks](Interactive%20Scheduler%20Benchmarks%20Linux.pdf)
+
+-   [MacOS Benchmarks](Interactive%20Scheduler%20Benchmarks%20MacOS.pdf)
+
+Quick Access To Implementations
+
+-   [LIFO Scheduler (simpler)](src/lifo_sched.c)
+
+-   [WorkStealing Scheduler (complex)](src/workstealing_sched.c)
+
+Quick Access To API (to use the schedulers as a library)
+
+-   [API](src/scheduler.h)
+
+-   [Usage with QuickSort](src/quicksort/quicksort.c)
+
+-   [Usage with Mandelbrot Fractals](src/fractal/render.c) (`render_mandelbrot_parallel` function, to run the fractal project read below)
+
 ## How to run
 
 The Makefile provides 4 targets, `quicklifo`, `quicksteal`, `stealbench` and `fracsteal`:
