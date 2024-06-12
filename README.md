@@ -16,7 +16,7 @@ Quick Access To Implementations
 
 Quick Access To API (to use the schedulers as a library)
 
--   [API](src/scheduler.h)
+-   [API](src/sched.h)
 
 -   [Usage with QuickSort](src/quicksort/quicksort.c)
 
