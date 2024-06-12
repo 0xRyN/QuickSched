@@ -2,7 +2,7 @@
 
 ## TL;DR
 
-Quick Access To Benchmarks
+Quick Access To Benchmarks (Check pages 8 to 11 for a summary)
 
 -   [Linux Benchmarks](Interactive%20Scheduler%20Benchmarks%20Linux.pdf)
 
